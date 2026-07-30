@@ -1,0 +1,6 @@
+.vscode/
+*.psd
+*.xcf
+*.raw
+*.tmp
+*.bak

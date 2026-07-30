@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <script src="https://code.iconify.design/iconify-icon/2.3.0/iconify-icon.min.js"></script>
+    <title>Portofolio</title>
+    <style>
+        @font-face {
+            font-family: MonoBold;
+            src: url('Assets/Font/MonoBold.ttf');
+        }
+
+        @font-face {
+            font-family: MonoLight;
+            src: url('Assets/Font/MonoLight.ttf');
+        }
+
+        @font-face {
+            font-family: TAG;
+            src: url('Assets/Font/aAnotherTag.otf');
+        }
+
+        @font-face {
+            font-family: montserrat;
+            src: url('Assets/Font/Montserrat-VariableFont_wght.ttf');
+        }
+
+        @font-face {
+            font-family: priestacy;
+            src: url('Assets/Font/Priestacy.otf');
+        }
+
+        @font-face {
+            font-family: EB_GARAMOND;
+            src: url('Assets/Font/EBGaramond-VariableFont_wght.ttf');
+        }
+
+        :root {
+            --bg-main: #254b6bff;
+            --bg-sec: #ffffffff;
+            --text-main: #254b6bff;
+            --text-sec: #ffffffff;
+            --text-thrd: #edc3a9ff;
+            --bg-opaque: opacity-50%;
+            --bg-complete: #a9e34b;
+            --bg-complete-txt: #5e9604;
+            --bg-incomplete: #e3c74b;
+            --bg-incomplete-txt: #966804;
+
+            /* below is android section color pallete */
+            --bg-main-andro: #facc15ff;
+            --bg-seco-andro: #202020ff;
+            --txt-main-andro: #facc15ff;
+            --txt-seco-andro: #202020ff;
+        }
+
+        .grid-bg-main {
+            background-image:
+                linear-gradient(var(--bg-main) 1px, transparent 1px),
+                linear-gradient(90deg, var(--bg-main) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        .grid-bg-sec {
+            background-image:
+                linear-gradient(var(--bg-sec) 1px, transparent 1px),
+                linear-gradient(90deg, var(--bg-sec) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        iconify-icon {
+            font-size: 28px;
+        }
+
+        /* Default: Desktop */
+        .desktop-section {
+            display: block;
+        }
+
+        .android-section {
+            display: none;
+        }
+
+        /* Kalau layar kecil (HP) */
+        @media (max-width: 768px) {
+            .desktop-section {
+                display: none;
+            }
+
+            .android-section {
+                display: block;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Section 1 -->
+    <section class="hidden md:block relative min-h-screen bg-[var(--bg-main)]">
+
+        <!-- Latar Belakang -->
+        <!-- <div class="absolute inset-0 opacity-50 bg-[url('Assets/texture_bg/texturas.png')] bg-cover bg-center"></div> -->
+        <div class="absolute inset-0 z-0 grid-bg-sec opacity-20 pointer-events-none"></div>
+
+        <div class="absolute inset-0 flex justify-center items-center">
+            <h1 class="font-[montserrat] font-black text-[var(--text-sec)] text-9xl">PORTOFOLIO
+            </h1>
+        </div>
+        <div class="absolute inset-0 flex justify-center items-center">
+            <h1 class="font-[priestacy] text-[var(--text-thrd)] text-5xl"> Rapinsa Arzika Ramadhan</h1>
+        </div>
+
+        <div class="absolute inset-0 flex justify-center items-center mt-50">
+            <h1 class="font-[priestacy] text-[var(--text-thrd)] text-2xl">VisualDesigner • Fresh
+                Graduate • Photographer</h1>
+        </div>
+
+    </section>
+
+    <!-- Section 1 ANDROID-->
+    <section class="block md:hidden mx-auto relative min-h-[800px] w-[360px]  overflow-hidden">
+
+        <!-- Latar Belakang -->
+        <div class="absolute inset-0 z-0 bg-[url('Assets/Background/SEC1.png')] bg-cover bg-center"></div>
+
+
+        <div class="relative z-10 w-[310px] h-[736px] mt-[32px] mx-auto">
+
+            <div class="absolute top-0 right-0 text-[var(--txt-main-andro)] font-[MonoBold] text-[15px]">[ 01 ]</div>
+
+            <div class="absolute bottom-0 w-full h-[232px] bg-black-500">
+                <h3 class="font-[MonoBold] text-[45px] text-[var(--txt-main-andro)] mb-[5px]">Portofolio</h3>
+                <h2 class="font-[MonoBold] leading-[15px] text-[15px] text-[var(--txt-main-andro)] mb-[101px]">
+                    //Creative Developer <br />
+                    //Photographer <br />
+                    //Game Developer
+                </h2>
+                <h2 class="font-[MonoLight] text-[10px] text-[var(--txt-main-andro)]">
+                    [ SCROLL DOWN 🡇 ]
+                </h2>
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <!-- Section 2 -->
+    <section class="desktop-section relative min-h-screen overflow-hidden bg-[var(--bg-sec)]">
+
+        <!-- Latar Belakang -->
+        <!-- <div class="absolute inset-0 z-0 bg-[url('Assets/texture_bg/texturas-2.png')] bg-cover bg-center opacity-50"></div> -->
+        <div class="absolute inset-0 z-0 grid-bg-main opacity-20 pointer-events-none"></div>
+
+        <!-- Overlay Putih -->
+        <div class="absolute inset-0 bg-white/40 z-0"></div>
+
+        <!-- Isi -->
+        <div class="relative z-10 grid grid-cols-6 grid-rows-6 min-h-screen px-10">
+
+
+            <div class="col-span-3 row-span-2 flex items-start pt-10">
+                <h1 class="text-8xl leading-none font-black font-[montserrat] text-[var(--text-main)] tracking-tight">
+                    ABOUT
+                    <br>
+                    ME
+                </h1>
+            </div>
+
+            <!-- description -->
+            <div class="col-span-3 row-span-2 row-start-3 flex items-start">
+
+                <div class="max-w-[520px] inline-block">
+
+                    <p
+                        class="text-xl leading-tight font-[montserrat] text-[var(--text-main)] font-light text-justify opacity-90">
+
+                        Hi there! I'm Rapinsa Arzika Ramadhan, a young tech enthusiast and recent
+                        Computer Science graduate from SMK Boedi Luhur.
+
+                        I enjoy exploring technology, building creative projects,
+                        and learning how systems work behind the scenes.
+                    </p>
+
+                    <!-- Toolbox -->
+                    <div class="mt-8">
+
+                        <div class="flex flex-wrap gap-2">
+
+                            <div
+                                class="px-3 py-1 rounded-[10px] bg-[var(--bg-main)] text-white text-sm shadow-lg flex items-center justify-center">
+                                <iconify-icon icon="devicon:vscode" width="22"></iconify-icon>
+                            </div>
+
+                            <div
+                                class="px-3 py-1 rounded-[10px] bg-[var(--bg-main)] text-white text-sm shadow-lg flex items-center justify-center">
+                                <iconify-icon icon="devicon:cplusplus" width="22"></iconify-icon>
+                            </div>
+
+                            <div
+                                class="px-3 py-1 rounded-[10px] bg-[var(--bg-main)] text-white text-sm shadow-lg flex items-center justify-center">
+                                <iconify-icon icon="devicon:flutter" width="22"></iconify-icon>
+                            </div>
+
+                            <div
+                                class="px-3 py-1 rounded-[10px] bg-[var(--bg-main)] text-white text-sm shadow-lg flex items-center justify-center">
+                                <iconify-icon icon="devicon:blender" width="22"></iconify-icon>
+                            </div>
+
+                            <div
+                                class="px-3 py-1 rounded-[10px] bg-[var(--bg-main)] text-white text-sm shadow-lg flex items-center justify-center">
+                                <iconify-icon icon="devicon:git" width="22"></iconify-icon>
+                            </div>
+
+                            <div
+                                class="px-3 py-1 rounded-[10px] bg-[var(--bg-main)] text-white text-sm shadow-lg flex items-center justify-center">
+                                <iconify-icon icon="devicon:inkscape" width="22"></iconify-icon>
+                            </div>
+
+                            <div
+                                class="px-3 py-1 rounded-[10px] bg-[var(--bg-main)] text-white text-sm shadow-lg flex items-center justify-center">
+                                <img src="Assets/image/kicad.svg" alt="KiCad"
+                                    class="w-[45px] object-contain select-none">
+                            </div>
+
+                            <div
+                                class="px-3 py-1 rounded-[10px] bg-[var(--bg-main)] text-white text-sm shadow-lg flex items-center justify-center">
+                                <iconify-icon icon="devicon:arduino" width="22"></iconify-icon>
+                            </div>
+
+                            <div
+                                class="px-3 py-1 rounded-[10px] bg-[var(--bg-main)] text-white text-sm shadow-lg flex items-center justify-center">
+                                <img src="Assets/image/Nikon.svg" alt="KiCad"
+                                    class="w-[20px] object-contain select-none">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- image -->
+        <div class="absolute right-0 bottom-0 z-10 h-full flex items-end">
+
+            <img class="h-[620px] w-auto
+    object-cover
+    drop-shadow-2xl
+    select-none
+    pointer-events-none" style="
+    mask-image: linear-gradient(to bottom, black 85%, transparent);
+    -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent);
+    " src="Assets/image/IMG_3070-fs8.png" alt="Rapinsa portrait">
+        </div>
+
+        </div>
+
+    </section>
+
+    <!-- Section 2 ANDROID-->
+    <section class=" android-section min-h-screen overflow-hidden bg-[var(--bg-seco-andro)]">
+
+        <!-- Latar Belakang -->
+        <!-- <div class="absolute inset-0 z-0 bg-[url('Assets/texture_bg/texturas-2.png')] bg-cover bg-center opacity-50"></div> -->
+
+
+        <div class="relative z-10 w-[310px] h-[736px] mt-[32px] mx-auto">
+
+            <div class="absolute top-0 right-0 text-[var(--txt-main-andro)] font-[MonoBold] text-[15px]">[ 02 ]</div>
+
+            <div class="absolute top-[20px] left-0 w-full flex flex-col">
+                <div class="text-[var(--txt-main-andro)] font-[MonoBold] text-[25px]">WHO AM I.</div>
+                <div class="mt-[55px] text-[var(--txt-main-andro)] leading-[43px] font-[TAG] text-[55px]">Rapinsa Arzika
+                    <br /> Ramadhan
+                </div>
+                <div
+                    class="mt-[18px] text-[var(--txt-main-andro)] leading-[15px] font-[MonoBold] text-wrap text-justify text-[15px]">
+                    a young tech enthusiast and recent Computer Science graduate from SMK Boedi Luhur. I enjoy exploring
+                    technology, building creative projects, and learning how systems work behind the scenes. </div>
+                <div
+                    class="mt-[16px] text-[var(--txt-main-andro)] leading-[15px] font-[MonoBold] text-justify text-[25px]">
+                    Loaded With :</div>
+
+                <div class="mt-[19px] flex flex-wrap justify-between gap-5">
+                    <div
+                        class=" rounded-[10px] h-[40px] w-[40px] bg-[var(--bg-main-andro)] flex items-center justify-center">
+                        <iconify-icon icon="devicon:vscode" width="22"></iconify-icon>
+                    </div>
+
+                    <div
+                        class=" rounded-[10px] h-[40px] w-[40px] bg-[var(--bg-main-andro)] flex items-center justify-center">
+                        <iconify-icon icon="devicon:cplusplus" width="22"></iconify-icon>
+                    </div>
+
+                    <div
+                        class=" rounded-[10px] h-[40px] w-[40px] bg-[var(--bg-main-andro)] flex items-center justify-center">
+                        <iconify-icon icon="devicon:flutter" width="22"></iconify-icon>
+                    </div>
+
+                    <div
+                        class=" rounded-[10px] h-[40px] w-[40px] bg-[var(--bg-main-andro)] flex items-center justify-center">
+                        <iconify-icon icon="devicon:debian" width="22"></iconify-icon>
+                    </div>
+
+                    <div
+                        class=" rounded-[10px] h-[40px] w-[40px] bg-[var(--bg-main-andro)] flex items-center justify-center">
+                        <iconify-icon icon="devicon:git" width="22"></iconify-icon>
+                    </div>
+
+                    <div
+                        class=" rounded-[10px] h-[40px] w-[40px] bg-[var(--bg-main-andro)] flex items-center justify-center">
+                        <iconify-icon icon="devicon:inkscape" width="22"></iconify-icon>
+                    </div>
+
+                    <div
+                        class="rounded-[10px] h-[40px] w-[55px] bg-[var(--bg-main-andro)] text-white text-sm flex items-center justify-center">
+                        <img src="Assets/image/kicad.svg" alt="KiCad" class="w-[45px] object-contain select-none">
+                    </div>
+
+                    <div
+                        class=" rounded-[10px] h-[40px] w-[40px] bg-[var(--bg-main-andro)] flex items-center justify-center">
+                        <iconify-icon icon="devicon:arduino" width="22"></iconify-icon>
+                    </div>
+
+                    <div
+                        class="rounded-[10px] h-[40px] w-[40px] bg-[var(--bg-main-andro)] text-white text-sm flex items-center justify-center">
+                        <img src="Assets/image/Nikon.svg" alt="KiCad" class="w-[20px] object-contain select-none">
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="absolute bottom-0 w-full h-[15px]">
+                <h2 class="font-[MonoLight] text-[10px] text-[var(--txt-main-andro)]">
+                    [ SCROLL DOWN 🡇 ]
+                </h2>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Section 3 -->
+    <section class="desktop-section relative min-h-screen overflow-hidden bg-[var(--bg-main)]">
+
+        <!-- <div class="absolute inset-0 z-0 opacity-50 bg-[url('Assets/texture_bg/texturas.png')] bg-cover bg-center"></div> -->
+        <div class="absolute inset-0 z-0 grid-bg-sec opacity-20 pointer-events-none"></div>
+
+        <div class="grid grid-cols-8 grid-rows-8 gap-4 p-10 h-screen z-10 relative">
+
+            <div class="col-span-6 row-span-2">
+                <h1 style="font-family: priestacy; color: var(--text-sec);" class="text-[66px] leading-[1]">
+                    There's unspeakable memory when <br> you push the camera shutter button.
+                </h1>
+            </div>
+
+            <div class="col-span-2 row-span-4 col-start-1 row-start-3 overflow-hidden">
+                <img src="Assets/image/image1-5.png" alt="" class="w-full h-full object-cover">
+            </div>
+
+            <div class="col-span-2 row-span-3 col-start-3 row-start-3 overflow-hidden">
+                <img src="Assets/image/image1-0.png" alt="" class="w-full h-full object-cover">
+            </div>
+
+            <div class="col-span-2 row-span-3 col-start-5 row-start-3 overflow-hidden">
+                <img src="Assets/image/image1-29.png" alt="" class="w-full h-full object-cover">
+            </div>
+
+            <div class="col-span-2 row-span-4 col-start-7 row-start-2 overflow-hidden">
+                <img src="Assets/image/use152.png" alt="" class="w-full h-full object-cover">
+            </div>
+
+            <div class="row-span-2 col-start-1 row-start-7 overflow-hidden">
+                <img src="Assets/image/image1-25.png" alt="" class="w-full h-full object-cover">
+            </div>
+
+            <div class="row-span-2 col-start-2 row-start-7 overflow-hidden">
+                <img src="Assets/image/use156.png" alt="" class="w-full h-full object-cover">
+            </div>
+
+            <div class="col-span-6 row-span-3 col-start-3 row-start-6 overflow-hidden">
+                <h1 style="font-family: EB_GARAMOND; color: var(--text-sec);"
+                    class="text-[23px] leading-[1] text-justify">
+                    14 year old me found photography fascinating after seeing someone documenting a wedding with a Canon
+                    5D.That was when I realized that the beauty of this world could be captured and remembered for
+                    eternity. Since then, I’ve been in love with this hobby, and keep improving my skills untilone day i
+                    got into vocational school, i became the documentation team but most of the time i documenting by my
+                    self with schools canon 750D, documenting almost any event happening in 2023-2025, until in my 3rd
+                    grade.... i finaly saved up enough money buy myself a DSLR camera, its not that much, just a
+                    refurbish nikon D3000 with 30 year old lens, its very old camera, but im happy with it.
+                </h1>
+
+                <hr style="color: var(--text-sec);" class="border-t my-4" />
+
+                <h1 style="font-family: EB_GARAMOND; color: var(--text-sec);"
+                    class="text-[20px] leading-[1] text-justify">
+                    But this isn't the only thing I do.
+                </h1>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Section 3 ANDROID-->
+    <section class=" android-section min-h-screen overflow-hidden bg-[var(--bg-main-andro)]">
+
+        <!-- Latar Belakang -->
+        <!-- <div class="absolute inset-0 z-0 bg-[url('Assets/texture_bg/texturas-2.png')] bg-cover bg-center opacity-50"></div> -->
+
+
+        <div class="relative z-10 w-[310px] h-[736px] mt-[32px] mx-auto">
+
+            <div class="absolute top-0 right-0 text-[var(--txt-seco-andro)] font-[MonoBold] text-[15px]">[ 03 ]</div>
+
+            <div class="absolute top-[20px] left-0 w-full flex flex-col">
+                <div class="text-[var(--txt-seco-andro)] leading-[25px] font-[MonoBold] text-[25px]">EVERY SHUTTER
+                    <br /> LEAVES A MARK.
+                </div>
+
+                <div class="mt-[30px] flex flex-wrap justify-between gap-[5px]">
+                    <div class="rounded-[5px] h-[100px] w-[100px] text-sm flex items-center justify-center">
+                        <img src="Assets/image/PNG1.png" alt=""
+                            class="rounded-[5px] h-[100px] w-[100px] object-contain select-none">
+                    </div>
+
+                    <div class="rounded-[5px] h-[100px] w-[100px] text-sm flex items-center justify-center">
+                        <img src="Assets/image/PNG2.png" alt=""
+                            class="rounded-[5px] h-[100px] w-[100px] object-contain select-none">
+                    </div>
+
+                    <div class="rounded-[5px] h-[100px] w-[100px] text-sm flex items-center justify-center">
+                        <img src="Assets/image/PNG3.png" alt=""
+                            class="rounded-[5px] h-[100px] w-[100px] object-contain select-none">
+                    </div>
+                </div>
+
+                <div class="mt-[5px] flex flex-wrap justify-between gap-[1px]">
+                    <div class="rounded-[5px] h-[100px] w-[100px] text-sm flex items-center justify-center">
+                        <img src="Assets/image/PNG4.png" alt=""
+                            class="rounded-[5px] h-[100px] w-[100px] object-contain select-none">
+                    </div>
+
+                    <div
+                        class="text-[var(--txt-seco-andro)] leading-[23px] font-[MonoBold] text-[24px] h-[100px] w-[200px] flex items-center">
+                        Not everything deserves to be remembered.<br />This one did.
+                    </div>
+                </div>
+
+                <div class="mt-[5px] flex flex-wrap justify-between gap-1">
+                    <div class="rounded-[5px] h-[232px] w-[310px] text-sm flex items-center justify-center">
+                        <img src="Assets/image/PNG5.png" alt=""
+                            class="rounded-[5px] h-[232px] w-[310px] object-contain select-none">
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="absolute bottom-0 w-full h-[15px]">
+                <h2 class="font-[MonoLight] text-[10px] text-[var(--txt-seco-andro)]">
+                    [ SCROLL DOWN 🡇 ]
+                </h2>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Section 4 -->
+    <section class="desktop-section relative h-screen overflow-hidden bg-[var(--bg-sec)]">
+
+        <!-- <div class="absolute inset-0 z-0 bg-[url('Assets/texture_bg/texturas-2.png')] bg-cover bg-center opacity-100"></div> -->
+        <div class="absolute inset-0 z-0 grid-bg-main opacity-20 pointer-events-none"></div>
+
+        <div class="z-10 min-h-screen p-10 relative">
+
+            <div class="mb-10">
+                <h1 style="font-family: priestacy; color: var(--text-main);" class="text-[66px] text-center">
+                    Selected Work
+                </h1>
+            </div>
+
+            <div class="h-screen flex justify-between gap-4">
+
+                <div
+                    class="hover:-translate-y-1 transition-transform backdrop-blur-[3px] shadow-lg p-6 h-fit min-h-[380px] w-[300px] text-[var(--bg-main)] rounded-[5px]">
+
+                    <div
+                        class="inline-flex items-center justify-between gap-3 px-3 py-[1px] mb-4 bg-[var(--bg-complete)] rounded-full ">
+                        <h3 class="text-[13px] font-[montserrat] font-medium text-[var(--bg-complete-txt)]">
+                            COMPLETED
+                        </h3>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="var(--bg-complete-txt)"
+                            class="size-4">
+                            <path fill-rule="evenodd"
+                                d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14Zm3.844-8.791a.75.75 0 0 0-1.188-.918l-3.7 4.79-1.649-1.833a.75.75 0 1 0-1.114 1.004l2.25 2.5a.75.75 0 0 0 1.15-.043l4.25-5.5Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+
+                    <div>
+                        <img class="mb-4 rounded-[5px]" src="Assets/image/schoolweb.png" alt="">
+                    </div>
+
+                    <div>
+                        <h2 class="text-1xl font-[montserrat] font-medium">
+                            SMK Boedi Luhur Website
+                        </h2>
+                    </div>
+
+                    <p class="mb-4 text-[14px] font-[montserrat] font-light">
+                        official website for information and New student admission
+                    </p>
+
+                    <a href="https://smk-smpboediluhur.sch.id/" class="flex justify-end absolute bottom-6 right-6">View
+                        Project →</a>
+
+                </div>
+
+                <!-- another one! -->
+
+                <div
+                    class="hover:-translate-y-1 transition-transform duration-300 backdrop-blur-[3px] shadow-lg p-6 h-fit min-h-[380px] w-[300px] text-[var(--bg-main)] rounded-[5px]">
+
+                    <div
+                        class="inline-flex items-center justify-between gap-3 px-3 py-[1px] mb-4 bg-[var(--bg-incomplete)] rounded-full ">
+                        <h3 class="text-[13px] font-[montserrat] font-medium text-[var(--bg-incomplete-txt)]">
+                            UNDER WORK
+                        </h3>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="var(--bg-incomplete-txt)"
+                            class="size-4">
+                            <path fill-rule="evenodd"
+                                d="M1 8a7 7 0 1 1 14 0A7 7 0 0 1 1 8Zm7.75-4.25a.75.75 0 0 0-1.5 0V8c0 .414.336.75.75.75h3.25a.75.75 0 0 0 0-1.5h-2.5v-3.5Z"
+                                clip-rule="evenodd" />
+                        </svg>
+
+
+                    </div>
+
+                    <div>
+                        <img class="mb-4 rounded-[5px]" src="Assets/image/RAREngine.png" alt="">
+                    </div>
+
+                    <div>
+                        <h2 class="text-1xl font-[montserrat] font-medium">
+                            RAREngine
+                        </h2>
+                    </div>
+
+                    <p class="mb-4 text-[14px] font-[montserrat] font-light">
+                        the idea was to make a light weight game engine for personal use
+                    </p>
+
+                    <a href="Porto.html" class="flex justify-end absolute bottom-6 right-6">View Project →</a>
+
+                </div>
+
+                <!-- another one! -->
+
+                <div
+                    class="hover:-translate-y-1 transition-transform duration-300 backdrop-blur-[3px] shadow-lg p-6 h-fit min-h-[380px] w-[300px] text-[var(--bg-main)] rounded-[5px]">
+
+                    <div
+                        class="inline-flex items-center justify-between gap-3 px-3 py-[1px] mb-4 bg-[var(--bg-incomplete)] rounded-full ">
+                        <h3 class="text-[13px] font-[montserrat] font-medium text-[var(--bg-incomplete-txt)]">
+                            UNDER WORK
+                        </h3>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="var(--bg-incomplete-txt)"
+                            class="size-4">
+                            <path fill-rule="evenodd"
+                                d="M1 8a7 7 0 1 1 14 0A7 7 0 0 1 1 8Zm7.75-4.25a.75.75 0 0 0-1.5 0V8c0 .414.336.75.75.75h3.25a.75.75 0 0 0 0-1.5h-2.5v-3.5Z"
+                                clip-rule="evenodd" />
+                        </svg>
+
+
+                    </div>
+
+                    <div>
+                        <img class="mb-4 rounded-[5px]" src="Assets/image/Esp8266 shield.png" alt="">
+                    </div>
+
+                    <div>
+                        <h2 class="text-1xl font-[montserrat] font-medium">
+                            Esp8266 Development shield
+                        </h2>
+                    </div>
+
+                    <p class="mb-4 text-[14px] font-[montserrat] font-light">
+                        i designed expansion board for the ESP8266 NodeMcu to simplify prototyping
+                    </p>
+
+                    <a href="https://github.com/RapinsaArzikaRamadhan/RAR-COREBOARD"
+                        class="flex justify-end absolute bottom-6 right-6">View Project →</a>
+
+                </div>
+
+                <!-- another one! -->
+
+                <div
+                    class="hover:-translate-y-1 transition-transform backdrop-blur-[3px] shadow-lg p-6 h-fit min-h-[380px] w-[300px] text-[var(--bg-main)] rounded-[5px]">
+
+                    <div
+                        class="inline-flex items-center justify-between gap-3 px-3 py-[1px] mb-4 bg-[var(--bg-complete)] rounded-full ">
+                        <h3 class="text-[13px] font-[montserrat] font-medium text-[var(--bg-complete-txt)]">
+                            COMPLETED
+                        </h3>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="var(--bg-complete-txt)"
+                            class="size-4">
+                            <path fill-rule="evenodd"
+                                d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14Zm3.844-8.791a.75.75 0 0 0-1.188-.918l-3.7 4.79-1.649-1.833a.75.75 0 1 0-1.114 1.004l2.25 2.5a.75.75 0 0 0 1.15-.043l4.25-5.5Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+
+                    <div>
+                        <img class="mb-4 rounded-[5px]" src="Assets/image/absen_dart.png" alt="">
+                    </div>
+
+                    <div>
+                        <h2 class="text-1xl font-[montserrat] font-medium">
+                            Student Internship attendance system
+                        </h2>
+                    </div>
+
+                    <p class="mb-4 text-[14px] font-[montserrat] font-light">
+                        A web-based attendance system for tracking student internships.
+                    </p>
+
+                    <a class="flex justify-end absolute bottom-6 right-6">
+                        Archived
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Section 4 ANDROID-->
+    <section class=" android-section min-h-screen overflow-hidden bg-[var(--bg-seco-andro)]">
+
+        <!-- Latar Belakang -->
+        <!-- <div class="absolute inset-0 z-0 bg-[url('Assets/texture_bg/texturas-2.png')] bg-cover bg-center opacity-50"></div> -->
+
+
+        <div class="relative z-10 w-[310px] h-[736px] mt-[32px] mx-auto">
+
+            <div class="absolute top-0 right-0 text-[var(--txt-main-andro)] font-[MonoBold] text-[15px]">[ 04 ]</div>
+
+            <div class="absolute top-[20px] left-0 w-full flex flex-col">
+                <div class="text-[var(--txt-main-andro)] leading-[25px] font-[MonoBold] text-[25px]">WORK ARCHIVE</div>
+
+                <div class="mt-[30px] flex flex-wrap justify-between gap-[5px]">
+                    <h3 class="font-[MonoBold] text-[15px] text-justify text-[var(--txt-main-andro)]">
+                        An archive of code, design, and ideas shaped through real projects and endless revisions.
+                    </h3>
+                </div>
+
+                <!-- 1 -->
+                <div x-data="{open:false}" class=" mt-[54px] w-[310px]">
+
+                    <!-- ini header -->
+
+                    <div @click="open = !open"
+                        class="flex items-center justify-between bg-[var(--bg-main-andro)] rounded-[5px] px-[5px]">
+                        <h3 class="font-[MonoBold] text-[10px] text-[var(--txt-seco-andro)]">
+                            //PROJECT_01 INTERNSHIP ATTENDANCE SYSTEM
+                        </h3>
+
+                        <h3 class="font-[MonoBold] text-[10px] text-[var(--txt-seco-andro)]">
+                            ▲
+                        </h3>
+                    </div>
+
+                    <!-- Dropdown -->
+                    <div x-show="open" x-transition class="bg-[var(--bg-main-andro)] mt-[2px] rounded-[5px] p-[10px]">
+                        <div class="w-full mb-5">
+                            <img src="Assets/image/absen_dart.png" alt="">
+                        </div>
+                        <div
+                            class="grid grid-cols-[90px_auto] gap-y-[1px] font-[MonoBold] text-[10px] text-[var(--txt-seco-andro)]">
+
+                            <span>TYPE</span><span>: APPLICATION</span>
+
+                            <span>STATUS</span><span>: COMPLETED/ACTIVE</span>
+
+                            <span>YEAR</span><span>: 2025</span>
+
+                            <span>STACK</span><span>: FLUTTER • PHP • MYSQL</span>
+
+                            <span>SOURCE</span><span>: PRIVATE</span>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- 2 -->
+                <div x-data="{open:false}" class=" mt-[5px] w-[310px]">
+
+                    <!-- ini header -->
+
+                    <div @click="open = !open"
+                        class="flex items-center justify-between bg-[var(--bg-main-andro)] rounded-[5px] px-[5px]">
+                        <h3 class="font-[MonoBold] text-[10px] text-[var(--txt-seco-andro)]">
+                            //PROJECT_02 SCHOOL WEBSITE
+                        </h3>
+
+                        <h3 class="font-[MonoBold] text-[10px] text-[var(--txt-seco-andro)]">
+                            ▲
+                        </h3>
+                    </div>
+
+                    <!-- Dropdown -->
+                    <div x-show="open" x-transition class="bg-[var(--bg-main-andro)] mt-[2px] rounded-[5px] p-[10px]">
+                        <div class="w-full mb-5">
+                            <img src="Assets/image/schoolweb.png" alt="">
+                        </div>
+                        <div class="grid grid-cols-[90px_auto] gap-y-[1px] font-[MonoBold] text-[10px] text-[var(--txt-seco-andro)]">
+
+                            <span>TYPE</span><span>: WEBSITE</span>
+
+                            <span>STATUS</span><span>: COMPLETED/ACTIVE</span>
+
+                            <span>YEAR</span><span>: 2025</span>
+
+                            <span>STACK</span><span>: HTML • CSS • PHP • MYSQL</span>
+
+                            <span>SOURCE</span><span>: <a href="http://smk-smpboediluhur.sch.id/">WEBSITE 🡭</a></span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- 3 -->
+                <div x-data="{open:false}" class=" mt-[5px] w-[310px]">
+
+                    <!-- ini header -->
+
+                    <div @click="open = !open"
+                        class="flex items-center justify-between bg-[var(--bg-main-andro)] rounded-[5px] px-[5px]">
+                        <h3 class="font-[MonoBold] text-[10px] text-[var(--txt-seco-andro)]">
+                            //PROJECT_03 RARENGINE
+                        </h3>
+
+                        <h3 class="font-[MonoBold] text-[10px] text-[var(--txt-seco-andro)]">
+                            ▲
+                        </h3>
+                    </div>
+
+                    <!-- Dropdown -->
+                    <div x-show="open" x-transition class="bg-[var(--bg-main-andro)] mt-[2px] rounded-[5px] p-[10px]">
+                        <div class="w-full mb-5">
+                            <img src="Assets/image/RAREngine.png" alt="">
+                        </div>
+                        <div
+                            class="grid grid-cols-[90px_auto] gap-y-[1px] font-[MonoBold] text-[10px] text-[var(--txt-seco-andro)]">
+
+                            <span>TYPE</span><span>: GAME ENGINE</span>
+
+                            <span>STATUS</span><span>: IN DEVELOPMENT</span>
+
+                            <span>YEAR</span><span>: 2026</span>
+
+                            <span>STACK</span><span>: C++ • RAYLIB • CMAKE</span>
+
+                            <span>LICENSE</span><span>: MIT</span>
+
+                            <span>SOURCE</span><span>: <a href="https://github.com/RapinsaArzikaRamadhan/RAREngine">GITHUB 🡭</a></span>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- 4 -->
+                <div x-data="{open:false}" class=" mt-[5px] w-[310px]">
+
+                    <!-- ini header -->
+
+                    <div @click="open = !open"
+                        class="flex items-center justify-between bg-[var(--bg-main-andro)] rounded-[5px] px-[5px]">
+                        <h3 class="font-[MonoBold] text-[10px] text-[var(--txt-seco-andro)]">
+                            //PROJECT_02 ESP8266 DEVELOPMENT SHIELD
+                        </h3>
+
+                        <h3 class="font-[MonoBold] text-[10px] text-[var(--txt-seco-andro)]">
+                            ▲
+                        </h3>
+                    </div>
+
+                    <!-- Dropdown -->
+                    <div x-show="open" x-transition class="bg-[var(--bg-main-andro)] mt-[2px] rounded-[5px] p-[10px]">
+                        <div class="w-full mb-5">
+                            <img src="Assets/image/Esp8266 shield.png" alt="">
+                        </div>
+                        <div
+                            class="grid grid-cols-[90px_auto] gap-y-[1px] font-[MonoBold] text-[10px] text-[var(--txt-seco-andro)]">
+
+                            <span>TYPE</span><span>: DEVELOPMENT BOARD</span>
+                                                
+                            <span>STATUS</span><span>: PROTOTYPE</span>
+                                                
+                            <span>YEAR</span><span>: 2026</span>
+                                                
+                            <span>STACK</span><span>: KICAD • ESP8266</span>
+                                                
+                            <span>LICENSE</span><span>: CERN OHL V2</span>
+                                                
+                            <span>SOURCE</span><span>: <a href="https://github.com/RapinsaArzikaRamadhan/RAR-COREBOARD">GITHUB 🡭</a></span>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="absolute bottom-0 w-full h-[15px]">
+                <h2 class="font-[MonoLight] text-[10px] text-[var(--txt-main-andro)]">
+                    [ SCROLL DOWN 🡇 ]
+                </h2>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Section 5 -->
+    <section class="desktop-section relative h-screen overflow-hidden bg-[var(--bg-main)]">
+
+        <!-- <div class="absolute inset-0 z-0 bg-[url('Assets/texture_bg/texturas-2.png')] bg-cover bg-center opacity-100"></div> -->
+        <div class="absolute inset-0 z-0 grid-bg-sec opacity-20 pointer-events-none"></div>
+
+        <div class="z-10 min-h-screen p-10 relative flex justify-between">
+
+            <div class="mb-10 w-[550px] h-full">
+                <h1 class="font-[montserrat] text-[var(--text-sec)] font-black text-[66px] text-left">
+                    CONTACT
+                </h1>
+                <H2 class="font-[montserrat] font-regular text-[var(--text-sec)] text-[15px]">
+                    Thanks for visiting my portfolio. I appreciate your time, <br>
+                    and I hope my work gave you a glimpse of what I enjoy building.
+                </H2>
+
+                <div class="mt-[40px]">
+                    <ul class="space-y-6">
+
+                        <li>
+                            <h3 class="font-[Priestacy] text-[35px] text-[var(--text-sec)]">
+                                GitHub
+                            </h3>
+
+                            <a href="https://github.com/RapinsaArzikaRamadhan" target="_blank" rel="noopener noreferrer"
+                                class="font-[Montserrat] text-[15px] text-[var(--text-sec)] hover:text-[var(--txt-main-andro)] transition-colors duration-300">
+                                github.com/RapinsaArzikaRamadhan
+                            </a>
+                        </li>
+
+                        <li>
+                            <h3 class="font-[Priestacy] text-[35px] text-[var(--text-sec)]">
+                                Instagram
+                            </h3>
+
+                            <ul class="mt-2 space-y-1">
+                                <li>
+                                    <a href="https://www.instagram.com/el_gatto_del_fotografo_/"
+                                        class="font-[Montserrat] text-[var(--text-sec)] hover:text-[var(--txt-main-andro)] transition-colors">
+                                        @el_gatto_del_fotografo_
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.instagram.com/el_gatto_del_3d_artist_/"
+                                        class="font-[Montserrat] text-[var(--text-sec)] hover:text-[var(--txt-main-andro)] transition-colors">
+                                        @el_gatto_del_3d_artist_
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.instagram.com/rapinsa_arzyka_ramadhan/"
+                                        class="font-[Montserrat] text-[var(--text-sec)] hover:text-[var(--txt-main-andro)] transition-colors">
+                                        @rapinsa_arzyka_ramadhan
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <h3 class="font-[Priestacy] text-[35px] text-[var(--text-sec)]">
+                                LinkedIn
+                            </h3>
+
+                            <a href="https://www.linkedin.com/in/rapinsa-arzyka-ramadhan-645218424/" target="_blank"
+                                rel="noopener noreferrer"
+                                class="font-[Montserrat] text-[15px] text-[var(--text-sec)] hover:text-[var(--txt-main-andro)] transition-colors">
+                                Rapinsa Arzika Ramadhan
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Section 5 ANDROID-->
+    <section class=" android-section min-h-screen overflow-hidden bg-[var(--bg-main-andro)]">
+
+        <!-- Latar Belakang -->
+        <!-- <div class="absolute inset-0 z-0 bg-[url('Assets/texture_bg/texturas-2.png')] bg-cover bg-center opacity-50"></div> -->
+
+
+        <div class="relative z-10 w-[310px] h-[736px] mt-[32px] mx-auto">
+
+            <div class="absolute top-0 right-0 text-[var(--txt-seco-andro)] font-[MonoBold] text-[15px]">[ 05 ]</div>
+
+            <div class="absolute top-[20px] left-0 w-full flex flex-col">
+                <div class="text-[var(--txt-seco-andro)] leading-[25px] font-[MonoBold] text-[25px]">WORK ARCHIVE</div>
+
+                <div class="mt-[30px] flex flex-wrap justify-between gap-[5px]">
+                    <h3 class="font-[MonoBold] text-[15px] text-justify text-[var(--txt-seco-andro)]">
+                        Thanks for making it this far.
+                        If you have an idea,
+                        a project,
+                        or just want to say hello,
+                        my inbox we're open
+                    </h3>
+                </div>
+
+                <hr class="mt-[26px] w-full bg-[var(--bg-seco-andro)]]">
+
+                <div class=" flex flex-wrap justify-between gap-[5px]">
+                    <h3 class="whitespace-pre font-[MonoBold] text-[14px] text-justify text-[var(--txt-seco-andro)]">
+contact
+├── github
+│   └── <a href="https://github.com/RapinsaArzikaRamadhan">RapinsaArzikaRamadhan</a>
+├── instagram
+│   ├── <a href="https://www.instagram.com/el_gatto_del_fotografo_/">el_gatto_del_fotografo_</a>
+│   ├── <a href="https://www.instagram.com/el_gatto_del_3d_artist_/">el_gatto_del_3d_artist_</a>
+│   └── <a href="https://www.instagram.com/rapinsa_arzyka_ramadhan/">rapinsa_arzyka_ramadhan</a>
+└── linked in
+    └── <a href="https://www.linkedin.com/in/rapinsa-arzyka-ramadhan-645218424/">Rapinsa Arzika Ramadhan</a>
+                    </h3>
+                </div>
+
+            </div>
+
+            <div class="absolute bottom-0 w-full h-[15px]">
+                <h2 class="font-[MonoLight] text-[10px] text-[var(--txt-seco-andro)]">
+                    [ END OF LINE ]
+                </h2>
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>
